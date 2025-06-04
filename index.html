@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Гра «З’їдання кульок» (Fancy + Додатково)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Гра з м'ячами</h1>
+
+  <form id="settingsForm">
+    <label>Кількість кульок для перемоги:
+      <input type="number" id="ballCount" value="10" min="1">
+    </label>
+    <label>Максимальна швидкість куль:
+      <input type="number" id="maxSpeed" value="5" min="1" step="0.5">
+    </label>
+    <label>Мінімальний розмір куль:
+      <input type="number" id="ballMinSize" value="5" min="2">
+    </label>
+    <label>Максимальний розмір куль:
+      <input type="number" id="ballMaxSize" value="15" min="3">
+    </label>
+    <label>Розмір гравця:
+      <input type="number" id="playerSize" value="30" min="10">
+    </label>
+    <label>Ім'я гравця:
+      <input type="text" id="playerName" value="Гравець">
+    </label>
+    <label>Цільовий колір кульок:
+      <input type="color" id="targetColor" value="#e53e3e">
+    </label>
+    <label>Кількість життів гравця:
+      <input type="number" id="playerHealth" value="3" min="1">
+    </label>
+  </form>
+
+  <button id="startButton">START</button>
+  <button id="stopButton">STOP</button>
+
+  <div class="info-bar">
+    <div>Рівень: <span id="levelDisplay">0</span></div>
+    <div>Життя: <span id="healthDisplay">0</span></div>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <div id="results">
+    <h2>Результати</h2>
+    <ul id="resultsList"></ul>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
